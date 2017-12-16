@@ -1,0 +1,29 @@
+{
+  "name": "get-medium",
+  "version": "1.0.0",
+  "description": "A public, non-auth API for programmatically reading Medium posts, user information, etc.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/",
+    "dev": "nodemon ./src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davguij/GET-medium.git"
+  },
+  "keywords": [],
+  "author": "David Guijarro<guijarro.dav@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/davguij/GET-medium/issues"
+  },
+  "homepage": "https://github.com/davguij/GET-medium#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "fastify": "^0.35.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.13.2"
+  }
+}
