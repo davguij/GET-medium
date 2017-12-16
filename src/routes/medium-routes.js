@@ -1,5 +1,5 @@
-const { mediumFetcher } = require('./helpers');
-const { userSchema } = require('./schemas');
+const { mediumFetcher } = require('../helpers');
+const { userSchema } = require('../schemas');
 
 async function routes(fastify, options) {
   fastify.get('/:username/all', async (request, reply) => {
