@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node ./src/server",
     "dev": "nodemon ./src/server",
-    "test": "ava src/*.spec.js src/**/*.spec.js"
+    "test": "nyc ava src/*.spec.js src/**/*.spec.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,11 @@
   },
   "devDependencies": {
     "ava": "^0.24.0",
-    "nodemon": "^1.13.2"
+    "codecov": "^3.0.0",
+    "nodemon": "^1.13.2",
+    "nyc": "^11.3.0"
+  },
+  "nyc": {
+    "exclude": ["src/**/*.spec.js", "src/*.spec.js"]
   }
 }
