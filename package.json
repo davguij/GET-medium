@@ -21,6 +21,7 @@
   "homepage": "https://github.com/davguij/GET-medium#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "cors": "^2.8.4",
     "fastify": "^0.35.7",
     "fastify-compress": "^0.2.1"
   },

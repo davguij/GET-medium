@@ -1,5 +1,6 @@
 const fastify = require('fastify')();
 
+fastify.use(require('cors')());
 fastify.register(require('fastify-compress'));
 fastify.register(require('./routes'));
 
