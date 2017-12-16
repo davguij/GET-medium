@@ -1,5 +1,6 @@
 const fastify = require('fastify')();
 
+fastify.register(require('fastify-compress'));
 fastify.register(require('./routes'));
 
 fastify.listen(3000, err => {
