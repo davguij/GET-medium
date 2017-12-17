@@ -35,15 +35,9 @@
     "ava": "^0.24.0",
     "codecov": "^3.0.0",
     "nodemon": "^1.13.2",
-    "now-travis": "^1.2.0",
     "nyc": "^11.3.0"
   },
   "nyc": {
     "exclude": ["src/**/*.spec.js", "src/*.spec.js"]
-  },
-  "now": {
-    "env": {
-      "NODE_ENV": "production"
-    }
   }
 }
