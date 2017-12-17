@@ -42,7 +42,7 @@ if (require.main === module) {
         port: 'p',
       },
       default: {
-        port: 3000,
+        port: process.env.PORT || 3000,
       },
     }),
     (err, instance) => {
