@@ -3,9 +3,27 @@ const minimist = require('minimist');
 
 fastify.use(require('cors')());
 fastify.register(require('fastify-compress'));
+fastify.register(require('fastify-swagger-ui'), {
+  swagger: {
+    info: {
+      title: 'Test swagger',
+      description: 'testing the fastify swagger api',
+      version: '0.1.0',
+    },
+    host: 'localhost',
+    schemes: ['http'],
+    consumes: ['application/json'],
+    produces: ['application/json'],
+  },
+});
 
 fastify.register(require('./routes/other-routes'));
-fastify.register(require('./routes/medium-routes'));
+fastify.register(require('./routes/medium-routes'), { prefix: '/api' });
+
+fastify.ready(err => {
+  if (err) throw err;
+  fastify.swagger();
+});
 
 const start = (opts, callback) => {
   fastify.listen(opts.port, err => {
