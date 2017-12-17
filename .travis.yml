@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "lts/*"
+cache:
+  directories:
+    - "node_modules"
+after_success:
+  - npm run coverage
+  - NOW_ALIAS=get-medium node_modules/.bin/now-travis
+env:
+  global:
+    secure: Ga66QwCyZ1kmYclFi2cC0C9LTVhVN6YRusPz4UpI9Kq7CehvxjE9+EzwWuige2rhb2mMJa83M3RRK7IV5iF1aNSSkwm8Jz1liJ5hINM+QH1WFrPMsbwKQPfKi5B6QgIrJ3F75XUifttvF6b32mGf3t/EjmB1euH3Ez/3a2Rbfuk62C+KCXkpFrzGRi8XQ4Ng769DTt5CRDGadnUc5go/HTuxoTf7zzJdjl8wxP4rBQ31JE3DBAkdcXscFcNQoBJTwByF960xy+JQnSz3AXVFA555p9lCjH9zaKY9iiWx+pXWpyTjKZMUW4iTVnJ1xM8tosagmMUKgOQWHe1M8nASECt6Q3XUQovCnchHppK7jagxeXK88CaxVBNThuNgCueit+1r2LrEiP40iunGTOp+12GVnFU5dLwUyhNa9VA/gYTsbtTPaW8nv6K4RPTsiwifQ0cTQk0bfgpnh9VahoM31eWwEsr2X5dGDMZ9S+mfxq/JjVrAx3zyJT2dvAMXyImMcSe41BcW8p+Gs3A7lPNC3E8j1Hc82e33rYaPwN/R60oma+vcJ/AqLCpWnqclQdKE9TeEOCCHgFYyDKzglbeNuGJwQNpOdONIceuA/Z+tHOdjm8b+DDmFqlEKx/YGEtLaW/kAvMlCx450q7WZPbePX/NI4/83mtVmQLyGj9ULe9k=

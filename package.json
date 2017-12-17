@@ -1,0 +1,49 @@
+{
+  "name": "get-medium",
+  "version": "1.0.0",
+  "description":
+    "A public, non-auth API for programmatically reading Medium posts, user information, etc.",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server",
+    "dev": "nodemon ./src/server",
+    "test": "nyc ava src/*.spec.js src/**/*.spec.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davguij/GET-medium.git"
+  },
+  "keywords": [],
+  "author": "David Guijarro<guijarro.dav@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/davguij/GET-medium/issues"
+  },
+  "homepage": "https://github.com/davguij/GET-medium#readme",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cors": "^2.8.4",
+    "fastify": "^0.35.7",
+    "fastify-compress": "^0.2.1",
+    "fastify-swagger-ui": "^1.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "codecov": "^3.0.0",
+    "nodemon": "^1.13.2",
+    "now-travis": "^1.2.0",
+    "nyc": "^11.3.0"
+  },
+  "nyc": {
+    "exclude": ["src/**/*.spec.js", "src/*.spec.js"]
+  },
+  "now": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
