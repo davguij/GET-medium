@@ -6,13 +6,13 @@ fastify.register(require('fastify-compress'));
 fastify.register(require('fastify-swagger-ui'), {
   swagger: {
     info: {
-      title: 'Test swagger',
-      description: 'testing the fastify swagger api',
-      version: '0.1.0',
+      title: 'GET Medium',
+      description:
+        'A public, non-auth API for programmatically reading Medium posts, user information, etc.',
+      version: '1.0.0',
     },
-    host: 'localhost',
-    schemes: ['http'],
-    consumes: ['application/json'],
+    host: process.env.URL || 'localhost',
+    schemes: ['https'],
     produces: ['application/json'],
   },
 });
